@@ -6,16 +6,26 @@ const text = document.querySelector('p');
 
 //1b - określamy potrzebne dane
 
-let textSize = 16; //początkowa wielkość font-size dla p
+let textSize = 20; //początkowa wielkość font-size dla p
 
+//1c - parametry poczatkowe ale lepiej okerslac w css
+
+text.style.fontSize = textSize + 'px';
 
 //3. Określenie akcji - napisanie funkcji
+
 function textIncrease() {
- // console.log("klik!");
- textSize++;
- text.style.fontSize = textSize + "px";
-}
+  textSize++;
+  text.style.fontSize = textSize + 'px';
+};
+
+function textDecrease() {
+  textSize--;
+  text.style.fontSize = textSize + 'px';
+};
+
 
 //2. Ustawienie nasłuchiwania na przyciskach na kliknięcie.
 
-btnIncrease.addEventListener('click', textIncrease)
+btnIncrease.addEventListener('click', textIncrease);
+btnDecrease.addEventListener('click', textDecrease);
